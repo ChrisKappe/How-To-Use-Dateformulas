@@ -1,0 +1,23 @@
+{
+  "id": "d2f1cfe5-2b94-43ef-a2e6-bd814f1685f5",
+  "name": "How-To-Use-Dateformulas",
+  "publisher": "Mark Brummel",
+  "brief": "",
+  "description": "",
+  "version": "1.0.0.0",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "capabilities": [],
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "13.0.0.0",
+  "application": "13.0.0.0",
+  "idRange": {
+    "from": 50140,
+    "to": 50149
+  },
+  "runtime": "2.0"
+}
