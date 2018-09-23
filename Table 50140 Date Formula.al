@@ -3,12 +3,18 @@ table 50140 "Date Formula"
     fields
     {
         field(1; "Primary Key"; Code[10]) { }
-        field(10; "Reference for Date Calculation"; Date) { }
+        field(10; "Reference for Date Calculation"; Date)
+        {
+            trigger OnValidate()
+            begin
+                CalculateNewDate;
+            end;
+        }
         field(20; "Date Formula to Test"; DateFormula)
         {
             trigger OnValidate()
             begin
-                CalculateResult;
+                CalculateNewDate;
             end;
         }
         field(30; "Date Result"; Date) { }
@@ -19,7 +25,7 @@ table 50140 "Date Formula"
         key(PK; "Primary Key") { Clustered = true; }
     }
 
-    procedure CalculateResult()
+    local procedure CalculateNewDate()
     begin
         "Date Result" := CalcDate("Date Formula to Test", "Reference for Date Calculation");
     end;
